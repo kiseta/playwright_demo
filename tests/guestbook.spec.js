@@ -12,7 +12,7 @@ const USER = [ 'Demouser', 'Demopass' ];
 const NOUSER = ['foo', 'bar'];
 
 
-test.describe('Guestbook tests', () => {
+test.describe('Guestbook Login tests', () => {
 
     test.beforeEach(async ({ page }) => {
 
