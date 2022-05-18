@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const app = 'Guestbook Demo';
 const baseUrl = 'https://testautomationpro.com/aut/';
+const homePageUrl = baseUrl + "index.php"
 const homePageTitle = 'Home - Guestbook Demo';
 const loginPageUrl = baseUrl + 'login.php';
 const loginPageTitle = 'Login - Guestbook Demo';
@@ -34,6 +35,8 @@ test.describe('Guestbook Login tests', () => {
 
         await logOut(page, ADMIN[0])
 
+        await validatePage(page, 'Home', homePageUrl, homePageTitle)
+
     });
 
     test('Test 02 | Login Demouser User', async ({ page }) =>  {
@@ -43,6 +46,9 @@ test.describe('Guestbook Login tests', () => {
         await validatePage(page, 'Guestbook Sign Form', formPageUrl, formPageTitle);
           
         await logOut(page, USER[0])
+
+        await validatePage(page, 'Home', homePageUrl, homePageTitle)
+
 
     });
 
@@ -98,8 +104,8 @@ async function navLoginPage(page, pagename, url, title) {
   async function logOut(page, username){
     
     let logoutLinkText = await page.locator('id=LogoutMenuItem').innerText();
-    await logthis(`Validate Login, logout link text: ${logoutLinkText}`);
+    await logthis(`Validate Login, logout link text: ${logoutLinkText} is displayed`);
     await expect(page.locator('id=LogoutMenuItem')).toHaveText('Logout '+ username);
     await page.locator('id=LogoutMenuItem').click();
-
+    await logthis(`Logout: Click \'Logout ${username} link\'`)
   }
