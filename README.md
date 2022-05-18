@@ -17,7 +17,7 @@ You will need the following installed on your computer.
 * `cd playwright-demo`
 * `npm install`
 
-### to run Playwright test (runs headless by default)
+## to run Playwright test (runs headless by default)
 ```
 npx playwright test
 ```
