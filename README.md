@@ -42,7 +42,7 @@ npx playwright test --browser=all
 to run in DEBUG
 
 ``` 
-$env:PWDEGUB=1
+$env:PWDEBUG=1
 ```
 then
 ```
