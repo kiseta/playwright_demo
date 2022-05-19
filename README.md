@@ -28,3 +28,26 @@ npx playwright test --headed
 or headed with nicely formatted html report
 ```
 npx playwright test --headed --reporter=html
+```
+on specific browser
+```
+npx playwright test --browser=firefox
+```
+on all browsers
+```
+npx playwright test --browser=all
+```
+
+## DEBUGging Playwright tests
+to run in DEBUG
+
+``` 
+$env:PWDEGUB=1
+```
+then
+```
+npx playwright test
+```
+
+```
+```
