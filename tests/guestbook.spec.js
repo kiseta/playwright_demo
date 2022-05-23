@@ -65,8 +65,6 @@ test.describe('Guestbook Login tests', () => {
       if(errTxt == loginErrorMsg) {
           await console.log(`Incorrect login error message is confirmed: ${loginErrorMsg}`)
       }
-
-      
     });
 
   }); 
