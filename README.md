@@ -1,7 +1,8 @@
 # Playwright Demo Project
 
-Playwright Test Automation framework with JavaScript Demo
-- Test Login feature on [Guestbook Demo App](https://https://testautomationpro.com/aut//)
+Playwright Automated Testing Tool Demo, GitHub Actions used to run the tests on push
+- Testing Login functionality on [Guestbook Demo App](https://testautomationpro.com/aut/) => tests/guestbook.spec.js
+- Testing New User Registration, Logout, Login functionality on [Advantage Online Shopping App](https://advantageonlineshopping.com/) => tests/aos.spec.js
 
 ## Prerequisites
 
@@ -17,7 +18,7 @@ You will need the following installed on your computer.
 * `cd playwright-demo`
 * `npm install`
 
-## to run Playwright test (runs headless by default)
+## Running Playwright tests (runs headless by default)
 ```
 npx playwright test
 ```
@@ -39,7 +40,7 @@ npx playwright test --browser=all
 ```
 
 ## DEBUGging Playwright tests
-to run in DEBUG
+to run in DEBUG mode, run the following command in terminal
 
 ``` 
 $env:PWDEBUG=1
@@ -47,7 +48,4 @@ $env:PWDEBUG=1
 then
 ```
 npx playwright test
-```
-
-```
 ```
