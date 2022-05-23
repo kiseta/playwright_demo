@@ -24,14 +24,14 @@ test.describe('AOS Tests', () => {
         for (n in data.listName){
             if (data.listName[n] != 'countryListboxRegisterPage'){
                 await page.locator(`input[name="${data.listName[n]}"]`).fill(data.listVal[n]);
-                // dataVals += data.listVal[n] + ', '
+                dataVals += data.listVal[n] + ', '
             }
             if (data.listName[n] == 'countryListboxRegisterPage') {
                 await page.locator('text=CountryCountry').click();
                 await page.selectOption('select[name="countryListboxRegisterPage"]', { label: 'Canada' });
             }
         }
-        console.log('>>> User data:', data.listVal)
+        console.log('>>> User data:', dataVals)
 
            
         await page.locator('input[name="i_agree"]').check();
